@@ -3,6 +3,9 @@ import articleContent from './article-content';
 const ArticlePage = ({ match }) => {
   const name = match.params.name;
   const article = articleContent.find(article => article.name === name);
+  
+  if (!article) return <h1>Article does not exist!</h1>
+
   return (
     <React.Fragment>
       <h1>{article.title}</h1>

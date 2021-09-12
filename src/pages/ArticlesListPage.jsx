@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import articleContent from './article-content';
 
-const ArticlesList = () => (
+const ArticlesListPage = () => (
   <React.Fragment>
     <h1>Articles</h1>
     {articleContent.map((article, key) => (
@@ -14,4 +14,4 @@ const ArticlesList = () => (
   </React.Fragment>
 );
 
-export default ArticlesList;
+export default ArticlesListPage;

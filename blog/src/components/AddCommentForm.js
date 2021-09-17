@@ -1,14 +1,28 @@
-import { json } from "express/lib/response";
 import React, { useState } from "react";
 
-const AddCommentForm = () => {
-  const [username, setUsername] = userState("");
+const AddCommentForm = ({ articleName, setArticleInfo }) => {
+  const [username, setUsername] = useState("");
   const [commentText, setCommentText] = useState("");
+
+  const addComment = async () => {
+    const result = await fetch(`/api/articles/${articleName}/add-comment`, {
+      method: "post",
+      body: JSON.stringify({ username, text: commentText }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const body = await result.json();
+    setArticleInfo(body);
+    setUsername("");
+    setCommentText("");
+  };
 
   return (
     <div id="add-comment-form">
+      <h3>Add a Comment</h3>
       <label>
-        Name
+        Name:
         <input
           type="text"
           value={username}
@@ -21,10 +35,10 @@ const AddCommentForm = () => {
           rows="4"
           cols="50"
           value={commentText}
-          onchange={(event) => setCommentText(event.target.value)}
+          onChange={(event) => setCommentText(event.target.value)}
         />
       </label>
-      <button>Add Comment</button>
+      <button onClick={() => addComment()}>Add Comment</button>
     </div>
   );
 };

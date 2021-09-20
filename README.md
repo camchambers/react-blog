@@ -1,5 +1,5 @@
 # Blog
-An example of a blog written in React with a MongoDB database. 
+An example of a blog written in React with a MongoDB database inspired by the LinkedIn:tm: course ["React: Creating and Hosting a Full-Stack Site"](https://www.linkedin.com/learning/react-creating-and-hosting-a-full-stack-site) by Shaun Wassell.
 
 ## Start Server
 npx babel-node src/server.js

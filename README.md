@@ -1,18 +1,25 @@
 # Blog
-An example of a blog written in React with a MongoDB database inspired by the LinkedIn:tm: course ["React: Creating and Hosting a Full-Stack Site"](https://www.linkedin.com/learning/react-creating-and-hosting-a-full-stack-site) by Shaun Wassell.
+An example of a blog written in React with a MongoDB database inspired by the course [React: Creating and Hosting a Full-Stack Site](https://www.linkedin.com/learning/react-creating-and-hosting-a-full-stack-site). This site was bootstraped with [Create React App](https://create-react-app.dev/). 
 
-## Start Server
-npx babel-node src/server.js
+## Requirements
+- NodeJS
+- NPM
+- MongoDB
 
 ## Setup
-Both the front end (React) and the backend (Node.js) need to be running to work.
-- run "yarn start" in blog-backend directory
-- run "yarn start" in blog directory
+- Create an articles collection in MongoDB
+- Run ```npm start``` in the blog-backend folder to start the local development server
+- Visit http://localhost:8000 to view the site
 
 ## Endpoints
 
-### Query Upvote Endpoint using CURL
-curl --header "Content-Type: application/json"  --request POST  http://localhost:8000/api/articles/learn-react/upvote
+The following curl commands can be used to query/test endpoints.
 
-### Query Comment Endpoint using CURL
-curl --header "Content-Type: application/json"  --request POST  http://localhost:8000/api/articles/learn-react/add-comment --data '{ "username": "me", "text": "I love this article again! wooo"} '
+### Upvote Endpoint
+```
+curl --header "Content-Type: application/json"  --request POST  http://localhost:8000/api/articles/learn-react/upvote
+```
+### Comment Endpoint
+```
+curl --header "Content-Type: application/json"  --request POST  http://localhost:8000/api/articles/learn-react/add-comment --data '{ "username": "Sam", "text": "I love this article!"} 
+```

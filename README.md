@@ -5,12 +5,6 @@ Inspired by the course [React: Creating and Hosting a Full-Stack Site](https://w
 
 This site was bootstraped with [Create React App](https://create-react-app.dev/). 
 
-## Requirements
-- NodeJS
-- NPM
-- MongoDB
-
-
 ## Installation
 
 1. Clone the repo

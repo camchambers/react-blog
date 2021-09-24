@@ -1,5 +1,5 @@
 # Blog
-An example of a blog using React with a MongoDB database. 
+An example of a blog using a MERN STACK (MongoDB, Express, React, and Node).
 
 Inspired by the course [React: Creating and Hosting a Full-Stack Site](https://www.linkedin.com/learning/react-creating-and-hosting-a-full-stack-site). 
 

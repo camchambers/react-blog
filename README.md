@@ -1,7 +1,5 @@
 # Blog
-An example of a blog using a MERN STACK (MongoDB, Express, React, and Node).
-
-Inspired by the course [React: Creating and Hosting a Full-Stack Site](https://www.linkedin.com/learning/react-creating-and-hosting-a-full-stack-site). 
+An example blog using a MERN stack (MongoDB, Express, React, and Node).
 
 This site was bootstraped with [Create React App](https://create-react-app.dev/). 
 
@@ -43,3 +41,6 @@ curl --header "Content-Type: application/json"  --request POST  http://localhost
 ```
 curl --header "Content-Type: application/json"  --request POST  http://localhost:8000/api/articles/learn-react/add-comment --data '{ "username": "Sam", "text": "I love this article!"} 
 ```
+### References
+Inspired by the course [React: Creating and Hosting a Full-Stack Site](https://www.linkedin.com/learning/react-creating-and-hosting-a-full-stack-site). 
+
